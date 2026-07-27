@@ -10,7 +10,7 @@ Les migrations SQLite numerotees de `cert_watcher/migrations/` sont appliquees a
 
 ## Rapports PDF par materiel
 
-Lorsqu'une nouvelle vulnerabilite correspond a un materiel, le service cree un rapport PDF distinct dans `data/reports/assets/`. Le rapport contient les vulnerabilites ouvertes, les tickets associes et le logo SEKERA (`sekera.png`). Il est adresse uniquement au contact defini pour ce materiel dans `assets.example.yaml`.
+Lorsqu'une nouvelle vulnerabilite correspond a un materiel, le service cree un rapport PDF distinct dans `data/reports/assets/`. Le rapport contient les vulnerabilites ouvertes, les tickets associes et le logo  (``). Il est adresse uniquement au contact defini pour ce materiel dans `assets.example.yaml`.
 
 L'envoi cible utilise l'API Gmail OAuth2, jamais SMTP. Conservez les jetons OAuth hors de Git et activez `GMAIL_MODE=live` uniquement apres validation du dry-run.
 

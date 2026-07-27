@@ -1,0 +1,5 @@
+PyYAML>=6.0,<7
+pytest>=8.0,<9
+Jinja2>=3.1,<4
+google-api-python-client>=2.0,<3
+google-auth-oauthlib>=1.2,<2

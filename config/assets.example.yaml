@@ -1,0 +1,266 @@
+organization: Northstar Retail Group (demonstration inventory)
+
+assets:
+  - id: edge-waf-par-01
+    name: WAF public Paris
+    type: security_appliance
+    environment: production
+    criticality: critical
+    owner_team: Cyber Defense
+    contact:
+      name: Élodie Benali
+      email: elodie.benali@example.invalid
+      escalation_email: cyber-manager@example.invalid
+    software:
+      - vendor: F5
+        product: BIG-IP
+        version: 17.1.1
+
+  - id: api-gateway-mrs-01
+    name: Passerelle API partenaires
+    type: server
+    environment: production
+    criticality: critical
+    owner_team: Digital Platform
+    contact:
+      name: Hugo Lefèvre
+      email: hugo.lefevre@example.invalid
+      escalation_email: digital-manager@example.invalid
+    software:
+      - vendor: Kong
+        product: Kong Gateway
+        version: 3.6.1
+      - vendor: NGINX
+        product: NGINX
+        version: 1.24.0
+
+  - id: iam-sso-01
+    name: Service d'identité et SSO
+    type: server
+    environment: production
+    criticality: critical
+    owner_team: Identity and Access
+    contact:
+      name: Mariam Diallo
+      email: mariam.diallo@example.invalid
+      escalation_email: iam-manager@example.invalid
+    software:
+      - vendor: Keycloak
+        product: Keycloak
+        version: 24.0.5
+      - vendor: Red Hat
+        product: Red Hat Enterprise Linux
+        version: 9.3
+
+  - id: k8s-prod-01
+    name: Cluster Kubernetes de production
+    type: container_platform
+    environment: production
+    criticality: critical
+    owner_team: Cloud Engineering
+    contact:
+      name: Thomas Nguyen
+      email: thomas.nguyen@example.invalid
+      escalation_email: cloud-manager@example.invalid
+    software:
+      - vendor: Kubernetes
+        product: Kubernetes
+        version: 1.29.4
+      - vendor: Red Hat
+        product: OpenShift Container Platform
+        version: 4.15.7
+
+  - id: backup-vault-01
+    name: Coffre de sauvegardes immuable
+    type: appliance
+    environment: production
+    criticality: critical
+    owner_team: Resilience Operations
+    contact:
+      name: Sarah Okafor
+      email: sarah.okafor@example.invalid
+      escalation_email: infrastructure-manager@example.invalid
+    software:
+      - vendor: Veeam
+        product: Backup & Replication
+        version: 12.1.1
+
+  - id: pos-store-lab-01
+    name: Banc de validation caisses magasins
+    type: workstation
+    environment: staging
+    criticality: medium
+    owner_team: Retail Technology
+    contact:
+      name: Rachid Amrani
+      email: rachid.amrani@example.invalid
+      escalation_email: retail-manager@example.invalid
+    software:
+      - vendor: Microsoft
+        product: Windows 11
+        version: 23H2
+      - vendor: Oracle
+        product: Java
+        version: 17.0.10
+
+  - id: analytics-bi-01
+    name: Plateforme décisionnelle
+    type: server
+    environment: production
+    criticality: high
+    owner_team: Data and Analytics
+    contact:
+      name: Inès Moreau
+      email: ines.moreau@example.invalid
+      escalation_email: data-manager@example.invalid
+    software:
+      - vendor: Apache
+        product: Superset
+        version: 3.1.0
+      - vendor: PostgreSQL
+        product: PostgreSQL
+        version: 16.2
+
+  - id: gitops-ops-01
+    name: Forge et automatisation des déploiements
+    type: server
+    environment: production
+    criticality: high
+    owner_team: Developer Experience
+    contact:
+      name: Lucas Pereira
+      email: lucas.pereira@example.invalid
+      escalation_email: engineering-manager@example.invalid
+    software:
+      - vendor: GitLab
+        product: GitLab CE
+        version: 16.11.1
+      - vendor: HashiCorp
+        product: Vault
+        version: 1.15.6
+
+  - id: secops-siem-01
+    name: Collecteur SIEM central
+    type: server
+    environment: production
+    criticality: high
+    owner_team: Cyber Defense
+    contact:
+      name: Élodie Benali
+      email: elodie.benali@example.invalid
+      escalation_email: cyber-manager@example.invalid
+    software:
+      - vendor: Elastic
+        product: Elasticsearch
+        version: 8.12.2
+      - vendor: Elastic
+        product: Kibana
+        version: 8.12.2
+
+  - id: mdm-eu-01
+    name: Gestion des terminaux Europe
+    type: server
+    environment: production
+    criticality: high
+    owner_team: End User Computing
+    contact:
+      name: Chloé Martin
+      email: chloe.martin@example.invalid
+      escalation_email: euc-manager@example.invalid
+    software:
+      - vendor: Microsoft
+        product: Intune
+        version: cloud
+
+  - id: collab-sharepoint-01
+    name: Portail collaboratif intranet
+    type: server
+    environment: production
+    criticality: high
+    owner_team: Digital Platform
+    contact:
+      name: Hugo Lefèvre
+      email: hugo.lefevre@example.invalid
+      escalation_email: digital-manager@example.invalid
+    software:
+      - vendor: Microsoft
+        product: SharePoint Server
+        version: Subscription Edition
+ 
+  - id: edge-fw-globalprotect-01
+    name: Pare-feu VPN accès distant
+    type: security_appliance
+    environment: production
+    criticality: critical
+    owner_team: Cyber Defense
+    contact:
+      name: Élodie Benali
+      email: elodie.benali@example.invalid
+      escalation_email: cyber-manager@example.invalid
+    software:
+       - vendor: Palo Alto Networks
+         product: PAN-OS
+         version: 11.1.3
+ 
+  - id: sandbox-fortisandbox-01
+    name: Bac à sable d'analyse de fichiers
+    type: security_appliance
+    environment: production
+    criticality: high
+    owner_team: Cyber Defense
+    contact:
+      name: Élodie Benali
+      email: elodie.benali@example.invalid
+      escalation_email: cyber-manager@example.invalid
+    software:
+      - vendor: Fortinet
+        product: FortiSandbox
+        version: 4.4.2
+ 
+  - id: ai-langflow-01
+    name: Plateforme de prototypage IA/LLM
+    type: server
+    environment: staging
+    criticality: medium
+    owner_team: Data and Analytics
+    contact:
+      name: Inès Moreau
+      email: ines.moreau@example.invalid
+      escalation_email: data-manager@example.invalid
+    software:
+      - vendor: Langflow
+        product: Langflow
+        version: 1.1.1
+ 
+  - id: cms-joomla-01
+    name: Site vitrine CMS marketing
+    type: server
+    environment: production
+    criticality: medium
+    owner_team: Digital Platform
+    contact:
+      name: Hugo Lefèvre
+      email: hugo.lefevre@example.invalid
+      escalation_email: digital-manager@example.invalid
+    software:
+      - vendor: Joomla
+        product: Joomla! CMS
+        version: 5.1.2
+      - vendor: Joomla
+        product: JCE (Joomla Content Editor)
+        version: 2.9.60
+
+  - id: msg-exchange-01
+    name: Serveur de messagerie interne
+    type: server
+    environment: production
+    criticality: high
+    owner_team: Identity and Access
+    contact:
+      name: Mariam Diallo
+      email: mariam.diallo@example.invalid
+      escalation_email: iam-manager@example.invalid
+    software:
+      - vendor: Microsoft
+        product: Exchange Server
+        version: 2019 CU15
